@@ -112,9 +112,10 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/posicionGlobal"
+                    app:icon="@drawable/posicion"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/posici_n_global"
+                    android:text="@string/posicion_global"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
@@ -122,6 +123,7 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/movimientos"
+                    app:icon="@drawable/movimientos"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/movimientos"
@@ -132,6 +134,7 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/transferencias"
+                    app:icon="@drawable/transferencias"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/transferencias"
@@ -142,6 +145,7 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/cambiarContrasena"
+                    app:icon="@drawable/editar"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/cambiar_contrase_a"
@@ -152,6 +156,7 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/promociones"
+                    app:icon="@drawable/promocion"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/promociones"
@@ -162,6 +167,7 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/cajeros"
+                    app:icon="@drawable/map_24"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/cajeros"
@@ -172,6 +178,7 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/salir"
+                    app:icon="@drawable/flecha_atras"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/salir2"
@@ -179,7 +186,6 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/cajeros"
                     />
-
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>

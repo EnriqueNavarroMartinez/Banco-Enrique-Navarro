@@ -22,6 +22,11 @@ class MainActivity : AppCompatActivity() {
         val usuarioRecibido = intent.getStringExtra("Usuario")
         binding.tv2.text = binding.tv2.text.toString()+usuarioRecibido
 
+        binding.cambiarContrasena.setOnClickListener {
+            val intent = Intent(this, PasswordActivity::class.java)
+            startActivity(intent)
+        }
+
         binding.salir.setOnClickListener {
             val intent = Intent(this, WelcomeActivity::class.java)
             startActivity(intent)

@@ -38,7 +38,7 @@ class LoginActivity : AppCompatActivity() {
                 entradaValida = false
             }
 
-            if (binding.tietPassw.text.toString().length > 8) {
+            if (binding.tietPassw.text.toString().length >= 8) {
                 if (binding.tietPassw.text.toString()
                         .matches(Regex("^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@#\$%^&+=!_-]).{8,}$"))
 
@@ -67,9 +67,8 @@ class LoginActivity : AppCompatActivity() {
         }
 
         binding.btSalir.setOnClickListener {
-
-            exitProcess(0);
-
+            val intent = Intent(this, WelcomeActivity::class.java)
+            startActivity(intent)
         }
 
 
