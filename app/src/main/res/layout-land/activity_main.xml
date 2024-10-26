@@ -100,7 +100,6 @@
             android:clickable="true"
             android:focusable="true">
 
-            <!-- NestedScrollView to make the TableLayout scrollable -->
             <androidx.core.widget.NestedScrollView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
