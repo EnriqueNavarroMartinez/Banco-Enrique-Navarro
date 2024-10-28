@@ -7,10 +7,9 @@
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/mi_ic_launcher"
-        android:label=""
         android:roundIcon="@mipmap/mi_ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/BancoEnnama"
+        android:theme="@style/Theme.BancoEnnama"
         tools:targetApi="31">
         <activity
             android:name=".PasswordActivity"
@@ -30,11 +29,7 @@
         <activity
             android:name=".LoginActivity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 
