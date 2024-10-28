@@ -22,5 +22,7 @@
     <string name="vuelve_a_introducir_la_nueva_contrasena">Vuelve a introducir la nueva contrasena</string>
     <string name="aceptar">Aceptar</string>
     <string name="elige_tu_cuenta">Elige tu cuenta:</string>
+    <string name="cuenta_propia">Cuenta propia</string>
+    <string name="cuenta_ajena">Cuenta ajena</string>
 
 </resources>
