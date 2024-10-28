@@ -21,5 +21,6 @@
     <string name="introduce_tu_nueva_contrase_a">Introduce tu nueva contraseña</string>
     <string name="vuelve_a_introducir_la_nueva_contrasena">Vuelve a introducir la nueva contrasena</string>
     <string name="aceptar">Aceptar</string>
+    <string name="elige_tu_cuenta">Elige tu cuenta:</string>
 
 </resources>
