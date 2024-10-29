@@ -24,5 +24,19 @@
     <string name="elige_tu_cuenta">Elige tu cuenta:</string>
     <string name="cuenta_propia">Cuenta propia</string>
     <string name="cuenta_ajena">Cuenta ajena</string>
+    <string name="enviar_justificante">Enviar Justificante</string>
+    <string name="enviar">Enviar</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="cantidad">Cantidad:</string>
+    <string name="euricos">€</string>
+
+
+    <string-array name="cuentas">
+    <item>ES60-2100-0418-40-1234567891</item>
+    <item>>ES70-3100-0785-30-2233445566</item>
+    <item>ES30-1100-0963-80-1987654321</item>
+    <item>ES10-9100-0111-10-9988776655</item>
+    </string-array>
+
 
 </resources>
