@@ -21,5 +21,14 @@
     <string name="introduce_tu_nueva_contrase_a">Enter your new password</string>
     <string name="vuelve_a_introducir_la_nueva_contrasena">Re-enter the new password</string>
     <string name="aceptar">Accept</string>
+    <string name="elige_tu_cuenta">Choose your account:</string>
+    <string name="cuenta_propia">Own account</string>
+    <string name="cuenta_ajena">Third party account</string>
+    <string name="enviar_justificante">Send Proof</string>
+    <string name="enviar">Send</string>
+    <string name="cancelar">Cancel</string>
+    <string name="cantidad">Amount:</string>
+    <string name="euricos">€</string>
+    <string name="transferenciass">TRANSFERS</string>
 
 </resources>
