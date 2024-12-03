@@ -10,7 +10,6 @@ import com.example.banco_ennama.databinding.ItemCuentaBinding
 import com.example.banco_ennama.fragments.AccountsFragment
 import com.example.bancoapiprofe.pojo.Cuenta
 
-// AccountsAdapter.kt
 class AccountsAdapter(private val cuentas: List<Cuenta>, private val listener: OnClickListener) : RecyclerView.Adapter<AccountsAdapter.ViewHolder>() {
 
     inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {

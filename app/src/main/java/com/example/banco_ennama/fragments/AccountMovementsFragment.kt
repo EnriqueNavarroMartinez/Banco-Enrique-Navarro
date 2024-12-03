@@ -32,7 +32,7 @@ class AccountMovementsFragment : Fragment() {
             val movimientos = getMovimientos(cuenta)
             movimientoAdapter = MovimientoAdapter(movimientos, object : MovimientoAdapter.OnMovementClickListener {
                 override fun onMovementClick(movimiento: Movimiento) {
-                    // Aquí podrías manejar el clic en un movimiento si fuera necesario
+
                 }
             })
 

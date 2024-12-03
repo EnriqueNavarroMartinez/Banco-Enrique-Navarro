@@ -42,7 +42,6 @@ class MovementsActivity : AppCompatActivity(), MovimientoAdapter.OnMovementClick
 
         listaCuentas = mbo?.getCuentas(cliente) as? ArrayList<Cuenta> ?: listOf()
 
-        // Configuración del Spinner con Binding
         val cuentas = listaCuentas.map { cuenta ->
             "${cuenta.getBanco()}-${cuenta.getSucursal()}-${cuenta.getDc()}-${cuenta.getNumeroCuenta()}"
         }
@@ -57,14 +56,12 @@ class MovementsActivity : AppCompatActivity(), MovimientoAdapter.OnMovementClick
         itemDecoration = DividerItemDecoration(this, DividerItemDecoration.VERTICAL)
         binding.reciclerView.addItemDecoration(itemDecoration)
 
-        // Usar binding para el evento del Spinner
         binding.spCuentas.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(parentView: AdapterView<*>?, view: android.view.View?, position: Int, id: Long) {
                 val cuentaSeleccionada = listaCuentas[position]
 
                 val movimientos = getMovimientos(cuentaSeleccionada)
 
-                // Aquí pasamos la actividad como listener
                 movimientoAdapter = MovimientoAdapter(movimientos, this@MovementsActivity)
                 binding.reciclerView.adapter = movimientoAdapter
             }
@@ -85,7 +82,6 @@ class MovementsActivity : AppCompatActivity(), MovimientoAdapter.OnMovementClick
         return mbo?.getMovimientos(cuenta) as? MutableList<Movimiento> ?: arrayListOf()
     }
 
-    // Implementación de la interfaz OnMovementClickListener
     override fun onMovementClick(movimiento: Movimiento) {
         // Crear el diálogo personalizado
         val dialog = MovementDialog(this, movimiento)
