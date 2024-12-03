@@ -49,7 +49,6 @@ class LoginActivity : AppCompatActivity() {
             // Operaciones del banco
             val mbo: MiBancoOperacional? = MiBancoOperacional.getInstance(this)
 
-            // Crear el objeto cliente
             val cliente = Cliente().apply {
                 setNif(dni)
                 setClaveSeguridad(password)
@@ -57,11 +56,9 @@ class LoginActivity : AppCompatActivity() {
 
             val clienteLogeado = mbo?.login(cliente) ?: -1
             if (clienteLogeado == -1) {
-                // Mostrar error si el cliente no existe
                 binding.tvErrorDni.text = "El cliente no existe en la base de datos."
                 binding.tvErrorDni.visibility = View.VISIBLE
             } else {
-                // Navegar a la actividad principal
                 val intent = Intent(this, MainActivity::class.java)
                 intent.putExtra("Cliente", clienteLogeado)
                 startActivity(intent)
