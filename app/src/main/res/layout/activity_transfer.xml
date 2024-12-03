@@ -16,6 +16,7 @@
         android:layout_marginTop="32dp"
         android:layout_marginEnd="16dp"
         android:text="@string/transferenciass"
+        android:fontFamily="@font/glaston"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -169,18 +170,18 @@
         android:text="@string/enviar_justificante"
         />
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/enviar"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="@id/guideline"
-            app:layout_constraintTop_toBottomOf="@id/checkbox"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="42dp"
-            android:layout_marginEnd="16dp"
-            android:text="@string/enviar"
-            ></com.google.android.material.button.MaterialButton>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/enviar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/checkbox"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="42dp"
+        style="@style/botones.BancoEnnama"
+        android:layout_marginEnd="16dp"
+        android:text="@string/enviar" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/cancelar"
@@ -191,9 +192,10 @@
         app:layout_constraintStart_toStartOf="@id/guideline"
         android:layout_marginStart="16dp"
         android:layout_marginTop="42dp"
+        style="@style/botones.BancoEnnama"
         android:layout_marginEnd="16dp"
         android:text="@string/cancelar"
-        ></com.google.android.material.button.MaterialButton>
+        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

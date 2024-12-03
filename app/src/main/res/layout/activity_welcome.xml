@@ -24,6 +24,7 @@
         android:layout_marginTop="82dp"
         android:layout_marginEnd="16dp"
         android:text="@string/bienvenido_a_mi_banco"
+        android:fontFamily="@font/glaston"
         style="@style/TextAppearance.MaterialComponents.Headline5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -38,9 +39,10 @@
         android:layout_marginTop="96dp"
         android:text="@string/entrar2"
         app:layout_constraintEnd_toEndOf="parent"
+        style="@style/botones.BancoEnnama"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textViewBienvenido"
-></com.google.android.material.button.MaterialButton>
+/>
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/imagenAnimada"

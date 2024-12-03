@@ -48,6 +48,7 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:text="@string/bienvenido_a"
+                    android:fontFamily="@font/glaston"
                     app:layout_constraintStart_toEndOf="@id/iv"
                     android:layout_marginStart="48dp"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -60,6 +61,7 @@
                     android:layout_height="match_parent"
                     android:layout_marginStart="58dp"
                     android:text=""
+                    android:fontFamily="@font/glaston"
                     android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
@@ -96,6 +98,7 @@
                             android:id="@+id/posicionGlobal"
                             app:icon="@drawable/posicion"
                             android:layout_width="0dp"
+                            style="@style/botones.BancoEnnama"
                             android:layout_height="wrap_content"
                             android:text="@string/posicion_global"
                             android:layout_weight="1" />
@@ -104,6 +107,7 @@
                             android:id="@+id/movimientos"
                             app:icon="@drawable/movimientos"
                             android:layout_width="0dp"
+                            style="@style/botones.BancoEnnama"
                             android:layout_height="wrap_content"
                             android:text="@string/movimientos"
                             android:layout_weight="1" />
@@ -117,6 +121,7 @@
                             android:id="@+id/transferencias"
                             app:icon="@drawable/transferencias"
                             android:layout_width="0dp"
+                            style="@style/botones.BancoEnnama"
                             android:layout_height="wrap_content"
                             android:text="@string/transferencias"
                             android:layout_weight="1" />
@@ -125,6 +130,7 @@
                             android:id="@+id/cambiarContrasena"
                             app:icon="@drawable/editar"
                             android:layout_width="0dp"
+                            style="@style/botones.BancoEnnama"
                             android:layout_height="wrap_content"
                             android:text="@string/cambiar_contrase_a"
                             android:layout_weight="1" />
@@ -138,6 +144,7 @@
                             android:id="@+id/promociones"
                             app:icon="@drawable/promocion"
                             android:layout_width="0dp"
+                            style="@style/botones.BancoEnnama"
                             android:layout_height="wrap_content"
                             android:text="@string/promociones"
                             android:layout_weight="1" />
@@ -145,6 +152,7 @@
                         <com.google.android.material.button.MaterialButton
                             android:id="@+id/cajeros"
                             app:icon="@drawable/map_24"
+                            style="@style/botones.BancoEnnama"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:text="@string/cajeros"
@@ -160,6 +168,7 @@
                             app:icon="@drawable/flecha_atras"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            style="@style/botones.BancoEnnama"
                             android:text="@string/salir2"
                             android:layout_weight="1" />
                     </TableRow>

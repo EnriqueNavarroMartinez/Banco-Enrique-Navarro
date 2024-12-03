@@ -15,6 +15,7 @@
         android:background="@drawable/planta" />
 
     <TextView
+        android:fontFamily="@font/glaston"
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -108,6 +109,7 @@
         android:layout_height="53dp"
         android:layout_marginTop="96dp"
         android:text="@string/entrar"
+        style="@style/botones.BancoEnnama"
         app:layout_constraintEnd_toStartOf="@+id/guideline"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvErrorPassw"
@@ -120,6 +122,7 @@
         android:layout_height="53dp"
         android:layout_marginTop="96dp"
         android:text="@string/salir"
+        style="@style/botones.BancoEnnama"
         app:layout_constraintStart_toEndOf="@+id/guideline"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvErrorPassw"

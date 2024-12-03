@@ -20,15 +20,14 @@
             android:layout_gravity="bottom"
             app:navigationIcon="@drawable/ic_menu"
             style="@style/Widget.MaterialComponents.BottomAppBar.Colored"/>
-        
+
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/fab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/bank_24"
             app:layout_anchor="@id/bab"
-            android:contentDescription="@string/add_task"
-            ></com.google.android.material.floatingactionbutton.FloatingActionButton>
+            android:contentDescription="@string/add_task" />
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
@@ -69,6 +68,7 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:text="@string/bienvenido_a"
+                    android:fontFamily="@font/glaston"
                     app:layout_constraintStart_toEndOf="@id/iv"
                     android:layout_marginStart="48dp"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -82,6 +82,7 @@
                     android:layout_height="match_parent"
                     android:layout_marginStart="58dp"
                     android:text=""
+                    android:fontFamily="@font/glaston"
                     android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@id/iv"
@@ -111,6 +112,7 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/posicionGlobal"
+                    style="@style/botones.BancoEnnama"
                     app:icon="@drawable/posicion"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -122,6 +124,7 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/movimientos"
+                    style="@style/botones.BancoEnnama"
                     app:icon="@drawable/movimientos"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -133,6 +136,7 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/transferencias"
+                    style="@style/botones.BancoEnnama"
                     app:icon="@drawable/transferencias"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -145,6 +149,7 @@
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/cambiarContrasena"
                     app:icon="@drawable/editar"
+                    style="@style/botones.BancoEnnama"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/cambiar_contrase_a"
@@ -155,6 +160,7 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/promociones"
+                    style="@style/botones.BancoEnnama"
                     app:icon="@drawable/promocion"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -168,6 +174,7 @@
                     android:id="@+id/cajeros"
                     app:icon="@drawable/map_24"
                     android:layout_width="match_parent"
+                    style="@style/botones.BancoEnnama"
                     android:layout_height="wrap_content"
                     android:text="@string/cajeros"
                     app:layout_constraintStart_toStartOf="parent"
@@ -179,6 +186,7 @@
                     android:id="@+id/salir"
                     app:icon="@drawable/flecha_atras"
                     android:layout_width="match_parent"
+                    style="@style/botones.BancoEnnama"
                     android:layout_height="wrap_content"
                     android:text="@string/salir2"
                     app:layout_constraintStart_toStartOf="parent"
