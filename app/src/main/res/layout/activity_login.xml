@@ -1,20 +1,18 @@
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:visibility="visible"
-    tools:context=".activities.LoginActivity"
-    >
+    tools:context=".activities.LoginActivity">
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:alpha="0.5"
-        android:background="@drawable/planta"
-        android:layout_marginTop="64dp" />
+        android:background="@drawable/planta" />
 
     <TextView
         android:id="@+id/textView"
@@ -36,9 +34,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="128dp"
         android:layout_marginEnd="16dp"
-        android:ems="10"
         app:helperText="Obligatorio"
-        android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textView">
@@ -47,34 +43,57 @@
             android:id="@+id/tietDni"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/introduce_tu_dni"/>
-
+            android:hint="@string/introduce_tu_dni" />
     </com.google.android.material.textfield.TextInputLayout>
 
+    <TextView
+        android:id="@+id/tvErrorDni"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:textColor="@color/red"
+        android:visibility="gone"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/dni"
+        app:layout_constraintTop_toBottomOf="@+id/dni"
+        app:layout_constraintEnd_toEndOf="@+id/dni" />
+
+    <!-- Campo Contraseña -->
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/passw"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="16dp"
-        android:ems="10"
-        android:inputType="text"
         app:helperText="Obligatorio"
         app:endIconMode="password_toggle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/dni">
+        app:layout_constraintTop_toBottomOf="@id/tvErrorDni">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/tietPassw"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/introduce_tu_contrasena"
-            android:inputType="textPassword"/>
-
+            android:inputType="textPassword" />
     </com.google.android.material.textfield.TextInputLayout>
 
+    <!-- Mensaje de error para Contraseña -->
+    <TextView
+        android:id="@+id/tvErrorPassw"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:textColor="@color/red"
+        android:visibility="gone"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/passw"
+        app:layout_constraintTop_toBottomOf="@+id/passw"
+        app:layout_constraintEnd_toEndOf="@+id/passw" />
+
+    <!-- Línea guía para centrar los botones -->
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
         android:layout_width="wrap_content"
@@ -82,6 +101,7 @@
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.5" />
 
+    <!-- Botón Entrar -->
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btEntrar"
         android:layout_width="0dp"
@@ -90,9 +110,10 @@
         android:text="@string/entrar"
         app:layout_constraintEnd_toStartOf="@+id/guideline"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/passw"
-        app:layout_constraintWidth_percent="0.4"/>
+        app:layout_constraintTop_toBottomOf="@id/tvErrorPassw"
+        app:layout_constraintWidth_percent="0.4" />
 
+    <!-- Botón Salir -->
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btSalir"
         android:layout_width="0dp"
@@ -101,7 +122,7 @@
         android:text="@string/salir"
         app:layout_constraintStart_toEndOf="@+id/guideline"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/passw"
-        app:layout_constraintWidth_percent="0.4"/>
+        app:layout_constraintTop_toBottomOf="@id/tvErrorPassw"
+        app:layout_constraintWidth_percent="0.4" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
