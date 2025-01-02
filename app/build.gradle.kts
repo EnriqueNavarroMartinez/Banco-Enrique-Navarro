@@ -51,4 +51,7 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     implementation(libs.lottie)
+    implementation (libs.androidx.appcompat.v161)
+    implementation (libs.material.v170)
+
 }

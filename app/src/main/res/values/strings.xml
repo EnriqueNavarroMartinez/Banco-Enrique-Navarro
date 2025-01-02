@@ -48,6 +48,11 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="aceptarr">Aceptar</string>
+    <string name="a">a</string>
+    <string name="mi_banco">Mi banco</string>
+    <string name="contacto_gmail_com">contacto@gmail.com</string>
+    <string name="open_nav">open\n</string>
+    <string name="close_nav">close</string>
 
 
 </resources>
