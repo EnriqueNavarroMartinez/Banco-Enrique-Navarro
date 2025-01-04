@@ -19,6 +19,7 @@ class AccountMovementsFragment : Fragment() {
 
     private lateinit var movimientoAdapter: MovimientoAdapter
     private lateinit var binding: FragmentAccountMovementsBinding
+    private var movimientos: List<Movimiento> = emptyList()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -29,23 +30,60 @@ class AccountMovementsFragment : Fragment() {
         val cuenta = arguments?.getSerializable("Cuenta") as? Cuenta
 
         if (cuenta != null) {
-            val movimientos = getMovimientos(cuenta)
-            movimientoAdapter = MovimientoAdapter(movimientos, object : MovimientoAdapter.OnMovementClickListener {
-                override fun onMovementClick(movimiento: Movimiento) {
-
-                }
-            })
-
-            binding.reciclerView.apply {
-                layoutManager = LinearLayoutManager(requireContext())
-                adapter = movimientoAdapter
-                addItemDecoration(
-                    DividerItemDecoration(requireContext(), DividerItemDecoration.VERTICAL)
-                )
-            }
+            movimientos = getMovimientos(cuenta)
+            setupRecyclerView()
+            setupBottomNavigation()
         }
 
         return binding.root
+    }
+
+    private fun setupRecyclerView() {
+        movimientoAdapter = MovimientoAdapter(movimientos, object : MovimientoAdapter.OnMovementClickListener {
+            override fun onMovementClick(movimiento: Movimiento) {
+                // Acción al hacer clic en un movimiento
+            }
+        })
+
+        binding.reciclerView.apply {
+            layoutManager = LinearLayoutManager(requireContext())
+            adapter = movimientoAdapter
+            addItemDecoration(
+                DividerItemDecoration(requireContext(), DividerItemDecoration.VERTICAL)
+            )
+        }
+    }
+
+    private fun setupBottomNavigation() {
+        binding.bottomNavigation.setOnItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.nav_todos -> {
+                    updateMovementsList(movimientos)
+                    true
+                }
+                R.id.nav_tipo_0 -> {
+                    val filtered = movimientos.filter { it.getTipo() == 0 }
+                    updateMovementsList(filtered)
+                    true
+                }
+                R.id.nav_tipo_1 -> {
+                    val filtered = movimientos.filter { it.getTipo() == 1 }
+                    updateMovementsList(filtered)
+                    true
+                }
+                R.id.nav_tipo_2 -> {
+                    val filtered = movimientos.filter { it.getTipo() == 2 }
+                    updateMovementsList(filtered)
+                    true
+                }
+                else -> false
+            }
+        }
+    }
+
+
+    private fun updateMovementsList(filteredMovements: List<Movimiento>) {
+        movimientoAdapter.updateData(filteredMovements)
     }
 
     private fun getMovimientos(cuenta: Cuenta): List<Movimiento> {

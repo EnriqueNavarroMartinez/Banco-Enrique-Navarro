@@ -10,7 +10,7 @@ import com.example.banco_ennama.databinding.ItemMovimientoBinding
 import com.example.bancoapiprofe.pojo.Movimiento
 
 class MovimientoAdapter(
-    private val movimientos: List<Movimiento>,
+    private var movimientos: List<Movimiento>,
     private val listener: OnMovementClickListener
 ) : RecyclerView.Adapter<MovimientoAdapter.ViewHolder>() {
 
@@ -43,4 +43,10 @@ class MovimientoAdapter(
             binding.importe.text = movimiento.getImporte().toString()
         }
     }
+
+    fun updateData(newMovimientos: List<Movimiento>) {
+        movimientos = newMovimientos
+        notifyDataSetChanged()
+    }
+
 }
