@@ -9,166 +9,189 @@
     tools:context=".activities.MainActivity">
 
     <!-- Main Content -->
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/main"
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/coordinator_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <!-- Toolbar -->
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/appbar"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/main"
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            android:elevation="4dp"
-            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:layout_height="match_parent">
 
-        <!-- Scrollable Content -->
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_marginTop="?attr/actionBarSize"
-            app:layout_constraintTop_toBottomOf="@id/appbar"
-            app:layout_constraintBottom_toBottomOf="parent">
-
-            <LinearLayout
-                android:id="@+id/ll"
+            <!-- Toolbar -->
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/appbar"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="16dp">
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                android:elevation="4dp"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:layout_constraintTop_toTopOf="parent" />
 
-                <!-- Tarjeta de bienvenida -->
-                <com.google.android.material.card.MaterialCardView
-                    android:id="@+id/mcvBienvenido"
+            <!-- Scrollable Content -->
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="?attr/actionBarSize"
+                app:layout_constraintTop_toBottomOf="@id/appbar"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <LinearLayout
+                    android:id="@+id/ll"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="16dp"
-                    android:clickable="true"
-                    android:focusable="true">
+                    android:orientation="vertical"
+                    android:padding="16dp">
 
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:id="@+id/cl"
+                    <!-- Tarjeta de bienvenida -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/mcvBienvenido"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_margin="16dp">
+                        android:layout_marginBottom="16dp"
+                        android:clickable="true"
+                        android:focusable="true">
 
-                        <ImageView
-                            android:id="@+id/iv"
-                            android:layout_width="72dp"
-                            android:layout_height="72dp"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            android:src="@drawable/usuario" />
-
-                        <TextView
-                            android:id="@+id/tv"
-                            android:layout_width="0dp"
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/cl"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@string/bienvenido_a"
-                            android:layout_marginStart="16dp"
-                            app:layout_constraintStart_toEndOf="@id/iv"
-                            app:layout_constraintTop_toTopOf="@id/iv"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5" />
+                            android:layout_margin="16dp">
 
-                        <TextView
-                            android:id="@+id/tv2"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="16dp"
-                            app:layout_constraintStart_toEndOf="@id/iv"
-                            app:layout_constraintTop_toBottomOf="@id/tv"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5" />
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-                </com.google.android.material.card.MaterialCardView>
+                            <ImageView
+                                android:id="@+id/iv"
+                                android:layout_width="72dp"
+                                android:layout_height="72dp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                android:src="@drawable/usuario" />
 
-                <!-- Botones -->
-                <com.google.android.material.card.MaterialCardView
-                    android:id="@+id/mcvBotones"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:clickable="true"
-                    android:focusable="true">
+                            <TextView
+                                android:id="@+id/tv"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:text="@string/bienvenido_a"
+                                android:layout_marginStart="16dp"
+                                app:layout_constraintStart_toEndOf="@id/iv"
+                                app:layout_constraintTop_toTopOf="@id/iv"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5" />
 
-                    <LinearLayout
-                        android:id="@+id/clBotones"
+                            <TextView
+                                android:id="@+id/tv2"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                app:layout_constraintStart_toEndOf="@id/iv"
+                                app:layout_constraintTop_toBottomOf="@id/tv"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <!-- Botones -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/mcvBotones"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:padding="16dp">
+                        android:clickable="true"
+                        android:focusable="true">
 
-                        <!-- Botones -->
-                        <com.google.android.material.button.MaterialButton
-                            android:id="@+id/posicionGlobal"
-                            style="@style/botones.BancoEnnama"
-                            app:icon="@drawable/posicion"
+                        <LinearLayout
+                            android:id="@+id/clBotones"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@string/posicion_global" />
+                            android:orientation="vertical"
+                            android:padding="16dp">
 
-                        <com.google.android.material.button.MaterialButton
-                            android:id="@+id/movimientos"
-                            style="@style/botones.BancoEnnama"
-                            app:icon="@drawable/movimientos"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/movimientos"
-                            android:layout_marginTop="8dp" />
+                            <!-- Botones -->
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/posicionGlobal"
+                                style="@style/botones.BancoEnnama"
+                                app:icon="@drawable/posicion"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/posicion_global" />
 
-                        <com.google.android.material.button.MaterialButton
-                            android:id="@+id/transferencias"
-                            style="@style/botones.BancoEnnama"
-                            app:icon="@drawable/transferencias"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/transferencias"
-                            android:layout_marginTop="8dp" />
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/movimientos"
+                                style="@style/botones.BancoEnnama"
+                                app:icon="@drawable/movimientos"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/movimientos"
+                                android:layout_marginTop="8dp" />
 
-                        <com.google.android.material.button.MaterialButton
-                            android:id="@+id/cambiarContrasena"
-                            style="@style/botones.BancoEnnama"
-                            app:icon="@drawable/editar"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/cambiar_contrase_a"
-                            android:layout_marginTop="8dp" />
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/transferencias"
+                                style="@style/botones.BancoEnnama"
+                                app:icon="@drawable/transferencias"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/transferencias"
+                                android:layout_marginTop="8dp" />
 
-                        <com.google.android.material.button.MaterialButton
-                            android:id="@+id/promociones"
-                            style="@style/botones.BancoEnnama"
-                            app:icon="@drawable/promocion"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/promociones"
-                            android:layout_marginTop="8dp" />
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/cambiarContrasena"
+                                style="@style/botones.BancoEnnama"
+                                app:icon="@drawable/editar"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/cambiar_contrase_a"
+                                android:layout_marginTop="8dp" />
 
-                        <com.google.android.material.button.MaterialButton
-                            android:id="@+id/cajeros"
-                            style="@style/botones.BancoEnnama"
-                            app:icon="@drawable/map_24"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/cajeros"
-                            android:layout_marginTop="8dp" />
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/promociones"
+                                style="@style/botones.BancoEnnama"
+                                app:icon="@drawable/promocion"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/promociones"
+                                android:layout_marginTop="8dp" />
 
-                        <com.google.android.material.button.MaterialButton
-                            android:id="@+id/salir"
-                            style="@style/botones.BancoEnnama"
-                            app:icon="@drawable/flecha_atras"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/salir2"
-                            android:layout_marginTop="8dp" />
-                    </LinearLayout>
-                </com.google.android.material.card.MaterialCardView>
-            </LinearLayout>
-        </ScrollView>
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/cajeros"
+                                style="@style/botones.BancoEnnama"
+                                app:icon="@drawable/map_24"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/cajeros"
+                                android:layout_marginTop="8dp" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/salir"
+                                style="@style/botones.BancoEnnama"
+                                app:icon="@drawable/flecha_atras"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/salir2"
+                                android:layout_marginTop="8dp" />
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+                </LinearLayout>
+            </ScrollView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.bottomappbar.BottomAppBar
+            android:id="@+id/bab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            app:navigationIcon="@drawable/ic_menu"
+            style="@style/Widget.MaterialComponents.BottomAppBar.Colored"/>
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|bottom"
+            android:src="@drawable/bank_24"
+            android:contentDescription="@string/add_task"
+            app:tint="@color/white" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
     <!-- Navigation Drawer -->
     <com.google.android.material.navigation.NavigationView
@@ -178,4 +201,5 @@
         android:layout_gravity="start"
         app:menu="@menu/menu_navigation_drawer"
         app:headerLayout="@layout/drawer_header" />
+
 </androidx.drawerlayout.widget.DrawerLayout>

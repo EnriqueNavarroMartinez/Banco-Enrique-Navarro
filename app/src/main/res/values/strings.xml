@@ -53,6 +53,8 @@
     <string name="contacto_gmail_com">contacto@gmail.com</string>
     <string name="open_nav">open\n</string>
     <string name="close_nav">close</string>
+    <string name="ajustes">Ajustes</string>
+    <string name="AJUSTES">AJUSTES</string>
 
 
 </resources>
