@@ -34,6 +34,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         setSupportActionBar(binding.appbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setHomeAsUpIndicator(R.drawable.bank_24)
+        supportActionBar?.setDisplayShowTitleEnabled(false)
 
         // Configuración del NavigationView
         binding.navigationView?.setNavigationItemSelectedListener(this)
