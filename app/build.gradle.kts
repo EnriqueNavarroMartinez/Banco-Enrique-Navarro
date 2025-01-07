@@ -53,5 +53,6 @@ dependencies {
     implementation(libs.lottie)
     implementation (libs.androidx.appcompat.v161)
     implementation (libs.material.v170)
+    implementation (libs.androidx.preference)
 
 }

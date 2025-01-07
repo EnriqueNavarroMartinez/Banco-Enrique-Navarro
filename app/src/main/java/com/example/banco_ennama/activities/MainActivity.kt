@@ -10,6 +10,7 @@ import androidx.core.view.GravityCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.banco_ennama.R
+import com.example.banco_ennama.SettingsActivity
 import com.example.banco_ennama.databinding.ActivityMainBinding
 import com.example.bancoapiprofe.pojo.Cliente
 import com.google.android.material.navigation.NavigationView
@@ -89,6 +90,11 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         startActivity(intent)
     }
 
+    private fun navigateToSettings() {
+        val intent = Intent(this, SettingsActivity::class.java)
+        startActivity(intent)
+    }
+
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
             android.R.id.home -> {
@@ -112,9 +118,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             R.id.nav_atms -> {
                 // Lógica para cajeros
             }
-            R.id.nav_sett -> {
-                // Lógica para settings
-            }
+            R.id.nav_sett -> navigateToSettings()
             R.id.nav_exit -> navigateToWelcome()
         }
         binding.drawerLayout?.closeDrawer(GravityCompat.START)

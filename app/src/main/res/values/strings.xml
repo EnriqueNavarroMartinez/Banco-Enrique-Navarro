@@ -46,15 +46,37 @@
         <item>ES10-9100-0111-10-9988776655</item>
     </string-array>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="aceptarr">Aceptar</string>
-    <string name="a">a</string>
-    <string name="mi_banco">Mi banco</string>
-    <string name="contacto_gmail_com">contacto@gmail.com</string>
-    <string name="open_nav">open\n</string>
-    <string name="close_nav">close</string>
-    <string name="ajustes">Ajustes</string>
-    <string name="AJUSTES">AJUSTES</string>
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+    <string name="aceptarr" translatable="false">Aceptar</string>
+    <string name="a" translatable="false">a</string>
+    <string name="mi_banco" translatable="false">Mi banco</string>
+    <string name="contacto_gmail_com" translatable="false">contacto@gmail.com</string>
+    <string name="open_nav" translatable="false">open\n</string>
+    <string name="close_nav" translatable="false">close</string>
+    <string name="ajustes" translatable="false">Ajustes</string>
+    <string name="AJUSTES" translatable="false">AJUSTES</string>
+
+    <string-array name="language_options">
+        <item>Español</item>
+        <item>Inglés</item>
+    </string-array>
+
+    <string-array name="language_values">
+        <item>es</item>
+        <item>en</item>
+    </string-array>
+
+    <string-array name="data_source_options">
+        <item>Base de datos local</item>
+        <item>Servicio web</item>
+    </string-array>
+
+    <string-array name="data_source_values">
+        <item>local_database</item>
+        <item>web_service</item>
+    </string-array>
+
+
 
 
 </resources>
