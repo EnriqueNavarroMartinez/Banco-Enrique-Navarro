@@ -1,11 +1,9 @@
-package com.example.banco_ennama
+package com.example.banco_ennama.activities
 
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.preference.PreferenceFragmentCompat
+import com.example.banco_ennama.R
 
 class SettingsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

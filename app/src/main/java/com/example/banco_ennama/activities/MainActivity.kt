@@ -3,6 +3,7 @@ package com.example.banco_ennama.activities
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.MenuItem
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
@@ -10,7 +11,6 @@ import androidx.core.view.GravityCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.banco_ennama.R
-import com.example.banco_ennama.SettingsActivity
 import com.example.banco_ennama.databinding.ActivityMainBinding
 import com.example.bancoapiprofe.pojo.Cliente
 import com.google.android.material.navigation.NavigationView
@@ -91,6 +91,12 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         startActivity(intent)
     }
 
+    private fun navigateToAtms(cliente: Cliente) {
+        val intent = Intent(this, AtmManagementActivity::class.java)
+        intent.putExtra("Cliente", cliente)
+        startActivity(intent)
+    }
+
     private fun navigateToSettings() {
         val intent = Intent(this, SettingsActivity::class.java)
         startActivity(intent)
@@ -106,6 +112,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         }
     }
 
+
+
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         val cliente = intent.getSerializableExtra("Cliente") as Cliente
         when (item.itemId) {
@@ -114,10 +122,11 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             R.id.nav_transfers -> navigateToTransfer(cliente)
             R.id.nav_change_password -> navigateToPassword(cliente)
             R.id.nav_promotions -> {
-                // Lógica para promociones
+
             }
             R.id.nav_atms -> {
-                // Lógica para cajeros
+                Log.d("Navigation", "Cajeros seleccionado")
+                navigateToAtms(cliente)
             }
             R.id.nav_sett -> navigateToSettings()
             R.id.nav_exit -> navigateToWelcome()
@@ -125,6 +134,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         binding.drawerLayout?.closeDrawer(GravityCompat.START)
         return true
     }
+
 
     private fun enableEdgeToEdge() {
 

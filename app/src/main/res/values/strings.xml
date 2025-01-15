@@ -55,6 +55,20 @@
     <string name="close_nav" translatable="false">close</string>
     <string name="ajustes" translatable="false">Ajustes</string>
     <string name="AJUSTES" translatable="false">AJUSTES</string>
+    <string name="atm">ATM</string>
+    <string name="atm_list">ATM List</string>
+    <string name="management_atm">Management ATM</string>
+    <string name="adress">Adress</string>
+    <string name="latitud">latitud</string>
+    <string name="latitudx">Latitud</string>
+    <string name="guardar">Guardar</string>
+    <string name="cancelardfdsd">Cancelar</string>
+    <string name="atm_listdf">ATM List</string>
+    <string name="select_atm">Select ATM</string>
+    <string name="atm_add">ATM Add</string>
+    <string name="borrardfvfd">Borrar</string>
+    <string name="modificar">Modificar</string>
+    <string name="longitudx">Longitud</string>
 
     <string-array name="language_options">
         <item>Español</item>
@@ -75,8 +89,6 @@
         <item>local_database</item>
         <item>web_service</item>
     </string-array>
-
-
 
 
 </resources>
