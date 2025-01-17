@@ -53,6 +53,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         binding.salir.setOnClickListener { navigateToWelcome() }
         binding.movimientos.setOnClickListener { navigateToMovements(cliente) }
         binding.posicionGlobal.setOnClickListener { navigateToGlobalPosition(cliente) }
+        binding.cajeros.setOnClickListener{(navigateToAtms(cliente))}
 
         // Configuración para los insets de las barras del sistema
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
